@@ -13,7 +13,7 @@ export default function Signup() {
     try {
       await API.post("https://auth-notify-backend.onrender.com/api/auth/signup", form);
       alert("✅ Signup successful!");
-      router.push("/profile");
+      router.push("/");
     } catch (err) {
         if (err && typeof err === "object" && "response" in err && err.response && typeof err.response === "object" && "data" in err.response && err.response.data && typeof err.response.data === "object" && "error" in err.response.data) {
           setError((err.response.data as { error?: string }).error || "Login failed");
