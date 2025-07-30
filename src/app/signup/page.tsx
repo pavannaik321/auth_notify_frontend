@@ -11,7 +11,7 @@ export default function Signup() {
 
   const submit = async () => {
     try {
-      await API.post("/auth/signup", form);
+      await API.post("https://auth-notify-backend.onrender.com/api/auth/signup", form);
       alert("✅ Signup successful!");
       router.push("/profile");
     } catch (err) {

@@ -24,7 +24,7 @@ export default function Profile() {
     if (!token) {
       router.push("/");
     } else {
-      API.get("/user/profile").then((res) => setProfile(res.data));
+      API.get("https://auth-notify-backend.onrender.com/api/user/profile").then((res) => setProfile(res.data));
     }
   }, [token, loading]);
 
