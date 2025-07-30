@@ -13,7 +13,7 @@ export default function Login() {
 
   const submit = async () => {
     try {
-      const res = await API.post("/auth/login", form);
+      const res = await API.post("https://auth-notify-backend.onrender.com/api/auth/login", form);
       auth?.login(res.data.token);
       router.push("/profile");
     } catch (err) {
